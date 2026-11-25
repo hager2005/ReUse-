@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="منصة إعادة الاستخدام للمجتمع لتبادل وتبرع بالأغراض المستعملة بحالة جيدة.">
+  <title>إعادة | منصة مشاركة المجتمع</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="التنقل الرئيسي">
+      <a class="brand" href="#" aria-label="إعادة الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true">↻</span>
+        <span>إعادة</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a class="active" href="#explore">استكشف</a>
+        <a href="#how">كيف تعمل؟</a>
+        <a href="#impact">تأثيرنا</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button" id="searchButton" type="button" aria-label="بحث">⌕</button>
+        <button class="btn btn-outline" type="button">تسجيل الدخول</button>
+        <button class="btn btn-primary" id="addItemButton" type="button">+ أضف غرضًا</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">معًا نحو مجتمع أقل هدرًا</span>
+          <h1>كل غرض له <em>حياة أخرى</em></h1>
+          <p>تبرع أو تبادل ما لا تحتاجه، وساعد الآخرين على إيجاد ما يحتاجونه. خطوات صغيرة تصنع أثرًا أكبر.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-large" href="#explore">استكشف الأغراض</a>
+            <button class="btn btn-light btn-large" id="heroAddButton" type="button">شارك غرضًا +</button>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="أغراض قابلة لإعادة الاستخدام">
+          <div class="arch">
+            <div class="shape shape-yellow"></div>
+            <div class="plant">🌿</div>
+            <div class="books"><span></span><span></span><span></span></div>
+            <div class="chair"><i></i><b></b></div>
+            <div class="pot">🪴</div>
+            <div class="lamp"></div>
+          </div>
+        </div>
+      </div>
+      <div class="community-strip">
+        <div class="container strip-grid">
+          <div><strong>+2,500</strong><span>غرض أعيد استخدامه</span></div>
+          <div><strong>1,840</strong><span>عضو في المجتمع</span></div>
+          <div><strong>12</strong><span>مدينة مشاركة</span></div>
+          <div><strong>98%</strong><span>رحلة استلام ناجحة</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section container">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">تصفح حسب اهتمامتك</span>
+          <h2>ابدأ اكتشاف الأغراض</h2>
+        </div>
+        <a href="#explore">عرض الكل ←</a>
+      </div>
+      <div class="category-grid" id="categories">
+        <button class="category-card category-green" data-category="أثاث"><span>🛋️</span><strong>أثاث</strong><small>148 غرضًا</small></button>
+        <button class="category-card category-cream" data-category="ملابس"><span>👕</span><strong>ملابس</strong><small>326 غرضًا</small></button>
+        <button class="category-card category-yellow" data-category="كتب"><span>📚</span><strong>كتب</strong><small>214 غرضًا</small></button>
+        <button class="category-card category-blue" data-category="أجهزة"><span>💻</span><strong>أجهزة</strong><small>92 غرضًا</small></button>
+        <button class="category-card category-pink" data-category="أدوات منزلية"><span>🏺</span><strong>أدوات منزلية</strong><small>175 غرضًا</small></button>
+      </div>
+    </section>
+
+    <section class="items-section container" id="explore">
+      <div class="section-heading">
+        <div>
+          <span class="kicker">مؤخرًا بالقرب منك</span>
+          <h2>أغراض تنتظر حياة جديدة</h2>
+        </div>
+        <div class="filters" role="group" aria-label="تصفية الأغراض">
+          <button class="filter active" data-filter="الكل" type="button">الكل</button>
+          <button class="filter" data-filter="تبرع" type="button">تبرع</button>
+          <button class="filter" data-filter="تبادل" type="button">تبادل</button>
+        </div>
+      </div>
+      <div class="items-grid" id="itemsGrid"></div>
+      <button class="load-more" id="loadMore" type="button">عرض المزيد من الأغراض</button>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="container">
+        <div class="center-heading">
+          <span class="kicker">ببساطة ومن القلب</span>
+          <h2>كيف تعمل منصة إعادة؟</h2>
+        </div>
+        <div class="steps">
+          <article><div class="step-icon">📸</div><span>01</span><h3>انشر غرضك</h3><p>أضف صورًا ووصفًا لحالة الغرض وحدد نوع المشاركة.</p></article>
+          <article><div class="step-icon">🔎</div><span>02</span><h3>اعثر على تطابق</h3><p>تصفح الأغراض القريبة أو ارسل طلبًا للحصول عليها.</p></article>
+          <article><div class="step-icon">🤝</div><span>03</span><h3>رتب الاستلام</h3><p>تواصل مع صاحب الغرض وحدد مكان ووقت الاستلام.</p></article>
+          <article><div class="step-icon">♻️</div><span>04</span><h3>ابدأ حياة جديدة</h3><p>استلم الغرض وحدّث حالته لتكمل رحلة الأثر الإيجابي.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-section container" id="impact">
+      <div class="impact-card">
+        <div>
+          <span class="kicker">أثر كل مشاركة</span>
+          <h2>لأنك تعيد استخدامه،<br>أنت تحمي البيئة.</h2>
+          <p>كل غرض تعطيه حياة جديدة يعني أقل استهلاكًا للموارد وأقل نفايات في مدننا.</p>
+          <a class="btn btn-primary btn-large" href="#explore">كن جزءًا من الأثر</a>
+        </div>
+        <div class="impact-stats">
+          <div><strong>4.8</strong><span>طن من CO₂ تم تجنبها</span></div>
+          <div><strong>7.2</strong><span>طن من النفايات تم إنقاذها</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="brand brand-light" href="#"><span class="brand-mark">↻</span><span>إعادة</span></a><p>مجتمع يربط بين الأشخاص ليمنح الأغراض حياة جديدة.</p></div>
+      <div><strong>المنصة</strong><a href="#explore">استكشف الأغراض</a><a href="#how">كيف تعمل؟</a><a href="#impact">تأثيرنا</a></div>
+      <div><strong>المساعدة</strong><a href="#">مركز المساعدة</a><a href="#">إرشادات السلامة</a><a href="#">تواصل معنا</a></div>
+    </div>
+    <div class="container copyright">© 2026 إعادة - جميع الحقوق محفوظة</div>
+  </footer>
+
+  <dialog id="itemModal">
+    <form method="dialog" id="itemForm">
+      <div class="modal-header">
+        <div><span class="kicker">شارك شيئًا مفيدًا</span><h2>إضافة غرض جديد</h2></div>
+        <button class="modal-close" value="cancel" aria-label="إغلاق">×</button>
+      </div>
+      <label>اسم الغرض<input name="title" required placeholder="مثال: كرسي مكتب مريح"></label>
+      <div class="form-row">
+        <label>التصنيف<select name="category"><option>أثاث</option><option>ملابس</option><option>كتب</option><option>أجهزة</option><option>أدوات منزلية</option></select></label>
+        <label>نوع المشاركة<select name="type"><option>تبرع</option><option>تبادل</option></select></label>
+      </div>
+      <label>الموقع<input name="location" required placeholder="المدينة أو الحي"></label>
+      <label>الوصف<textarea name="description" required placeholder="اذكر حالة الغرض وأي تفاصيل مهمة"></textarea></label>
+      <button class="btn btn-primary btn-large modal-submit" value="default">نشر الغرض</button>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

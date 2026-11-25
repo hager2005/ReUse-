@@ -1,2 +1,11 @@
-# ReUse-
-في كل بيت بنلاقي حاجات كتير مبقيناش محتاجينها، لكنها لسه بحالة جيدة وممكن تكون مفيدة لشخص تاني. وفي المقابل، فيه أشخاص بيدوروا على نفس الحاجات وبيضطروا يشتروا منتجات جديدة رغم إن فيه بدائل متاحة ممكن إعادة استخدامها. من هنا جاءت فكرة ReUse، وهي منصة تهدف إلى تشجيع إعادة الاستخدام من خلال ربط الأشخاص اللي عندهم منتجات لم يعودوا بحاجة إليها بأشخاص آخ
+# ReUse Community Sharing Platform
+
+A web-based community platform that encourages reuse and sharing by connecting people who want to donate or exchange unused items.
+
+## Run locally
+
+Open `index.html` in a browser, or serve the folder with a local web server:
+
+```powershell
+php -S localhost:8000
+```
